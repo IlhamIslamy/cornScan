@@ -1,0 +1,11 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, sans-serif; /* Anda bisa menggantinya dengan font dari Tailwind jika mau */
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb; /* Atau gunakan kelas utilitas Tailwind seperti bg-gray-50 */
+}
