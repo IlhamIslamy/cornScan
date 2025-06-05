@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Leaf, Home, Info, Menu, X, History } from 'lucide-react';
+import { Leaf, Home, Info, Menu, X, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Navigation = ({ currentPage, setCurrentPage }) => {
@@ -9,6 +9,7 @@ const Navigation = ({ currentPage, setCurrentPage }) => {
     const navItems = [
         { path: '/', label: 'Beranda', icon: Home },
         { path: '/cornLeafScanner', label: 'Scanner', icon: Leaf },
+        { path: '/team', label: 'Team', icon: User },
         { path: '/about', label: 'Tentang', icon: Info },
     ];
 

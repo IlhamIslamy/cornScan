@@ -1,11 +1,14 @@
 import React from 'react';
+
 const LoadingSpinner = ({ message = "Memuat model, mohon tunggu..." }) => {
-    return (
-        <div className="flex flex-col items-center justify-center text-black text-lg font-medium">
-            {message}
-            <div className="w-10 h-10 border-4 border-gray-300 border-t-white rounded-full animate-spin mt-5"></div>
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-500 mx-auto mb-4"></div>
+          <p className="text-gray-600">{message}</p>
         </div>
-    );
+      </div>
+  );
 };
 
 export default LoadingSpinner;

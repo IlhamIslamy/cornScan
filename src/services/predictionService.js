@@ -1,9 +1,10 @@
 import * as tf from "@tensorflow/tfjs";
 
+// Import TensorFlow.js for GraphModel support
 export const loadModel = async () => {
     try {
         await tf.ready();
-        const modelPath = "/model_hasil_konversi_graph/model.json";
+        const modelPath = "/model/model.json";
         const loadedModel = await tf.loadGraphModel(modelPath);
         return { model: loadedModel, error: null };
     } catch (err) {
@@ -14,6 +15,7 @@ export const loadModel = async () => {
     }
 };
 
+// Preprocess the image to match the input requirements of the model
 export const preprocessImage = (img) => {
     return tf.tidy(() => {
         const pixels = tf.browser.fromPixels(img);
@@ -24,6 +26,7 @@ export const preprocessImage = (img) => {
     });
 };
 
+// Make a prediction using the loaded GraphModel
 export const makePrediction = async (model, tensor) => {
     try {
         console.log("Melakukan prediksi dengan GraphModel...");
@@ -42,7 +45,6 @@ export const makePrediction = async (model, tensor) => {
             throw new Error("Format output prediksi dari GraphModel tidak dikenali.");
         }
 
-        console.log("Output prediksi mentah (probabilitas):", data);
         return data;
     } catch (err) {
         console.error("Error saat prediksi dengan GraphModel:", err);
@@ -50,6 +52,8 @@ export const makePrediction = async (model, tensor) => {
     }
 };
 
+
+// Find the class with the highest probability from the prediction data
 export const findBestPrediction = (data, classNames) => {
     let maxProb = -1;
     let predictedClassIndex = -1;

@@ -1,5 +1,6 @@
-import React, { useRef, useState } from 'react';
-import { Upload, Leaf } from 'lucide-react';
+import React from 'react';
+import { useRef, useState } from 'react';
+import { Upload,  } from 'lucide-react';
 
 const FileInput = ({ onFileChange, disabled }) => {
     const fileInputRef = useRef(null);
