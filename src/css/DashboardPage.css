@@ -1,0 +1,116 @@
+/* General container for the dashboard content */
+.content-area {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9fafb; /* Light gray background */
+}
+
+/* Header styles */
+.content-area h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827; /* Dark gray */
+  margin-bottom: 0.5rem;
+}
+
+.content-area p {
+  font-size: 1.125rem;
+  color: #6b7280; /* Medium gray */
+}
+
+/* Grid layout for statistics cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Individual statistic card styling */
+.stat-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon container within the stat card */
+.stat-icon {
+  background-image: linear-gradient(to right, #10b981, #06b6d4); /* Green to cyan gradient */
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Content within the stat card */
+.stat-content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4b5563; /* Gray */
+  margin: 0;
+}
+
+.stat-content .stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827; /* Dark gray */
+  margin-top: 0.25rem;
+}
+
+/* Card for quick actions */
+.card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Flex container for the quick action buttons */
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Individual action button styling */
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #f3f4f6; /* Light gray background */
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #374151; /* Darker gray text */
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.action-button:hover {
+  background-color: #e5e7eb; /* Slightly darker gray on hover */
+}
+
+/* Icon container within the action button */
+.action-button .action-icon {
+  background-image: linear-gradient(to right, #8b5cf6, #ec4899); /* Purple to pink gradient */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

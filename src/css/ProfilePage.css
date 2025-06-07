@@ -1,0 +1,208 @@
+.profile-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.profile-header {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937; /* gray-800 */
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid #e5e7eb; /* gray-200 */
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.profile-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+}
+
+.avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.avatar-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+.btn-change-avatar {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-change-avatar:hover {
+    background-color: #e5e7eb;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 500;
+    color: #374151; /* gray-700 */
+    margin-bottom: 0.5rem;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon svg {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af; /* gray-400 */
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db; /* gray-300 */
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-with-icon input:focus {
+    outline: none;
+    border-color: #2563eb; /* blue-600 */
+    box-shadow: 0 0 0 2px #bfdbfe; /* blue-200 */
+}
+
+.input-with-icon input:disabled {
+    background-color: #f3f4f6; /* gray-100 */
+    cursor: not-allowed;
+}
+
+.btn-save {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #16a34a; /* green-600 */
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-save:hover {
+    background-color: #15803d; /* green-700 */
+}
+
+.btn-save:disabled {
+    background-color: #a3e635; /* lime-400 */
+    cursor: not-allowed;
+}
+
+.message-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.message-banner.success {
+    background-color: #f0fdf4; /* green-50 */
+    color: #16a34a; /* green-600 */
+    border: 1px solid #bbf7d0; /* green-200 */
+}
+
+.message-banner.error {
+    background-color: #fef2f2; /* red-50 */
+    color: #dc2626; /* red-600 */
+    border: 1px solid #fecaca; /* red-200 */
+}
+/* ... (style lain yang sudah ada di ProfilePage.css) ... */
+
+/* --- STYLE UNTUK BANNER NOTIFIKASI --- */
+
+.message-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* 12px */
+    padding: 1rem; /* 16px */
+    border-radius: 8px;
+    margin-bottom: 2rem; /* 32px */
+    font-weight: 500;
+    border: 1px solid transparent;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Style untuk pesan sukses (hijau) */
+.message-banner.success {
+    background-color: #f0fdf4; /* Tailwind's green-50 */
+    color: #166534; /* Tailwind's green-800 */
+    border-color: #bbf7d0; /* Tailwind's green-200 */
+}
+
+.message-banner.success svg {
+    color: #22c55e; /* Tailwind's green-500 */
+}
+
+/* Style untuk pesan error (merah) */
+.message-banner.error {
+    background-color: #fef2f2; /* Tailwind's red-50 */
+    color: #991b1b; /* Tailwind's red-800 */
+    border-color: #fecaca; /* Tailwind's red-200 */
+}
+
+.message-banner.error svg {
+    color: #ef4444; /* Tailwind's red-500 */
+}
+
+/* Animasi sederhana untuk banner */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

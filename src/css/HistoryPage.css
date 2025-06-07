@@ -1,0 +1,209 @@
+/* Anda bisa menggunakan kembali style .content-area dan .card dari file CSS dashboard Anda */
+/* Jika belum, Anda bisa menambahkannya di file CSS global atau di sini */
+
+.content-area {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9fafb;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Memastikan tabel bisa di-scroll pada layar kecil */
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font-mono {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+/* Container untuk tabel agar responsif */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Styling utama untuk tabel */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse; /* Menghilangkan spasi antar border sel */
+    min-width: 600px; /* Lebar minimum sebelum scroll horizontal muncul */
+}
+
+/* Styling untuk header tabel (thead) */
+.custom-table thead tr {
+    background-color: #f3f4f6; /* Warna latar header abu-abu muda */
+}
+
+.custom-table th {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4b5563; /* Warna teks header abu-abu */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Styling untuk isi tabel (tbody) */
+.custom-table tbody tr {
+    border-bottom: 1px solid #e5e7eb; /* Garis pemisah antar baris */
+}
+
+.custom-table tbody tr:last-child {
+    border-bottom: none; /* Hapus border pada baris terakhir */
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f9fafb; /* Efek hover pada baris */
+}
+
+.custom-table td {
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+    color: #374151; /* Warna teks isi tabel */
+    vertical-align: middle; /* Memastikan konten sel vertikal di tengah */
+}
+
+/* Styling untuk status badge */
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px; /* Membuat bentuk pil */
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status-sehat {
+    background-color: #d1fae5; /* Hijau muda */
+    color: #065f46; /* Hijau tua */
+}
+
+.status-diperlukan {
+    background-color: #fee2e2; /* Merah muda */
+    color: #991b1b; /* Merah tua */
+}
+
+/* Styling untuk tombol aksi (icon) */
+.btn-icon {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #6b7280; /* Warna ikon abu-abu */
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-icon:hover {
+    background-color: #e5e7eb; /* Latar abu-abu saat hover */
+    color: #111827; /* Warna ikon lebih gelap saat hover */
+}
+/* Tambahkan ini ke dalam file ../css/HistoryPage.css */
+
+.history-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #eee;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-delete {
+    color: #ef4444; /* red-500 */
+}
+.btn-delete:hover {
+    background-color: #fee2e2; /* red-100 */
+}
+
+/* Modal Styles */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.modal-body {
+    color: #4b5563; /* gray-600 */
+    margin-bottom: 1.5rem;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-secondary {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db; /* gray-300 */
+    background-color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-secondary:hover {
+    background-color: #f3f4f6; /* gray-100 */
+}
+
+.btn-danger {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-color: #ef4444; /* red-500 */
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-danger:hover {
+    background-color: #dc2626; /* red-600 */
+}
+.btn-danger:disabled {
+    background-color: #f87171; /* red-400 */
+    cursor: not-allowed;
+}
