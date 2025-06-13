@@ -1,0 +1,20 @@
+<svg class="favicon-large" viewBox="0 0 32 32">
+    <defs>
+        <linearGradient id="cornGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#22c55e" />
+            <stop offset="100%" style="stop-color:#16a34a" />
+        </linearGradient>
+    </defs>
+    <!-- Corn leaf shape dengan AI accent -->
+    <path d="M6 28 Q6 20, 8 16 Q10 8, 16 4 Q22 8, 24 16 Q26 20, 26 28 Q20 24, 16 26 Q12 24, 6 28 Z"
+        fill="url(#cornGrad1)" stroke="#166534" stroke-width="1" />
+    <!-- Central vein -->
+    <path d="M16 4 Q16 12, 16 26" stroke="#166534" stroke-width="1.5" fill="none" />
+    <!-- Side veins -->
+    <path d="M12 12 Q14 14, 16 16" stroke="#166534" stroke-width="0.8" fill="none" />
+    <path d="M20 12 Q18 14, 16 16" stroke="#166534" stroke-width="0.8" fill="none" />
+    <path d="M10 18 Q13 20, 16 22" stroke="#166534" stroke-width="0.8" fill="none" />
+    <path d="M22 18 Q19 20, 16 22" stroke="#166534" stroke-width="0.8" fill="none" />
+    <!-- AI indicator dot -->
+    <circle cx="24" cy="8" r="2" fill="#3b82f6" stroke="white" stroke-width="0.5" />
+</svg>

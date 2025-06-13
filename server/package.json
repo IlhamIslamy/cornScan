@@ -1,0 +1,43 @@
+{
+  "name": "cornleaf-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Corn Leaf Disease Detection using TensorFlow.js",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --expose-gc server.js",
+    "start": "node server.js",
+    "debug": "node --inspect --expose-gc server.js",
+    "clean": "rm -rf node_modules package-lock.json && npm install",
+    "test": "node --experimental-test test/*.js",
+    "check-model": "node check-model.js"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.11.0",
+    "@tensorflow/tfjs-node": "^4.11.0",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.1",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.14.1",
+    "nodemailer": "^7.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "tensorflow",
+    "machine-learning",
+    "corn-leaf",
+    "disease-detection",
+    "api"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
